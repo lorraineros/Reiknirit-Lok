@@ -1,1 +1,2 @@
-# Reiknirit-Lok
+# Lokaverkefni
+## Lorraine Rós
