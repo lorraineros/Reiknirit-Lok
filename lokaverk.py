@@ -19,18 +19,18 @@ def heilda(fall):
             i = ""
             ind = x.index("x")
             if ind == 0 and len(x) > 1:
-                i = i + str(1 / (int(x[ind + 1:]) + 1)) + "*x**" + str(int(x[ind + 1:]) + 1)
+                i = i + str(1 / (int(x[ind + 1:]) + 1)) + "*(x)**" + str(int(x[ind + 1:]) + 1)
                 lidur.append(i)
             elif ind == 0 and len(x) == 1:
-                lidur.append("0.5*x**2")
+                lidur.append("0.5*(x)**2")
             elif len(x) > 2:
-                i = i + str(int(x[:ind]) / (int(x[ind + 1:]) + 1)) + "*x**" + str(int(x[ind + 1:]) + 1)
+                i = i + str(int(x[:ind]) / (int(x[ind + 1:]) + 1)) + "*(x)**" + str(int(x[ind + 1:]) + 1)
                 lidur.append(i)
             else:
-                i = i + str(int(x[:ind]) / 2) + "*x**" + "2"
+                i = i + str(int(x[:ind]) / 2) + "*(x)**" + "2"
                 lidur.append(i)
         else:
-            lidur.append(x + "*x")
+            lidur.append(x + "*(x)")
     for x in range(len(lidur)):
         strengur = strengur + formerki[x] + lidur[x]
 
@@ -44,12 +44,11 @@ def flatarmal(fall, efri, nedri):
 
     return flatarmal
 
-
-def rummalSnuda(fall):
+def rummalSnuda(fall, efri, nedri):
     nytt_fall = heilda(fall)
     m_a = nytt_fall.replace("x", efri)
     m_b = nytt_fall.replace("x", nedri)
-    rummal = float(math.pi * ((heilda(fall))**2))
+    rummal = math.pi*(flatarmal(fall,m_a,m_b))
     return rummal
 
 on=True
@@ -81,7 +80,9 @@ while on:
 
     elif val==3:
         fall = input("Sláðu inn fallið: f(x)= ")
-        print("Rúmmmál Snúða f(x) =", fall, "er:", rummalSnuda(fall))
+        efri = input("Sláðu inn x fyrir efri mörk: ")
+        nedri = input("Sláðu inn x fyrir neðri mörk: ")
+        print("Rúmmmál Snúða f(x) =", fall, "er:", rummalSnuda(fall, efri, nedri))
 
     elif val==4:
         on=False
