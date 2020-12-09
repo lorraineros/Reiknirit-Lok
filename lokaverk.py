@@ -44,6 +44,7 @@ def flatarmal(fall, efri, nedri):
 
     return flatarmal
 
+
 def rummalSnuda(fall):
     nytt_fall = heilda(fall)
     m_a = nytt_fall.replace("x", efri)
@@ -51,9 +52,41 @@ def rummalSnuda(fall):
     rummal = float(math.pi * ((heilda(fall))**2))
     return rummal
 
-fall = input("Sláðu inn fallið: f(x)= ")
-efri = input("Sláðu inn x fyrir efri mörk: ")
-nedri = input("Sláðu inn x fyrir neðri mörk: ")
+on=True
+while on:
+    print("1. Flatarmál milli x-ás og f(x)")
+    print("2. Flatarmál milli f(x) og g(x)")
+    print("3. Rúmmál snúða")
+    print("4. Hætta")
+    val = int(input("Veldu hvað þú vilt reikna:"))
 
-print("Flatarmálið milli x-ás og f(x) =", fall, "er:", flatarmal(fall,efri,nedri))
-print("Rúmmmál Snúða f(x) =", fall, "er:", rummalSnuda(fall))
+    if val==1:
+
+        fall = input("Sláðu inn fallið: f(x)= ")
+        efri = input("Sláðu inn x fyrir efri mörk: ")
+        nedri = input("Sláðu inn x fyrir neðri mörk: ")
+
+        print("Flatarmálið milli x-ás og f(x) =", fall, "er:", flatarmal(fall,efri,nedri))
+
+    elif val==2:
+        fall = input("Sláðu inn fallið: f(x)= ")
+        fall2 = input("Sláðu inn fallið: g(x)= ")
+        efri = input("Sláðu inn x fyrir efri mörk: ")
+        nedri = input("Sláðu inn x fyrir neðri mörk: ")
+
+        flat = flatarmal(fall,efri,nedri)
+        flat2 = flatarmal(fall2,efri,nedri)
+
+        print("Flatarmálið milli f(x)=", fall,", og g(x) =", fall2, "er:", abs(round(flat - flat2, 5)))
+
+    elif val==3:
+        fall = input("Sláðu inn fallið: f(x)= ")
+        print("Rúmmmál Snúða f(x) =", fall, "er:", rummalSnuda(fall))
+
+    elif val==4:
+        on=False
+
+    else:
+        print()
+        print("Ekki hægt veldu aftur!")
+        print()
