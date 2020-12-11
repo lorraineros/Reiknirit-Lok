@@ -8,3 +8,6 @@ http://rasmus.is/Is/T/F/su66mn.htm
 
 ## Dagbók
 https://github.com/lorraineros/Reiknirit-Lok/wiki/Dagb%C3%B3k
+
+## Skýrsla
+https://github.com/lorraineros/Reiknirit-Lok/wiki
