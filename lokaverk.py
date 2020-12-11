@@ -60,7 +60,7 @@ while on:
     val = int(input("Veldu hvað þú vilt reikna:"))
 
     if val==1:
-
+        print("Til dæmis 2x2+2x+2")
         fall = input("Sláðu inn fallið: f(x)= ")
         efri = input("Sláðu inn x fyrir efri mörk: ")
         nedri = input("Sláðu inn x fyrir neðri mörk: ")
