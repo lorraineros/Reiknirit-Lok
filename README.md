@@ -1,7 +1,7 @@
 # Lokaverkefni - Lorraine Rós
 
 ## Skýrsla
-* https://github.com/lorraineros/Reiknirit-Lok/wiki
+* https://github.com/lorraineros/Reiknirit-Lok/wiki/Sk%C3%BDrsla
 
 ## Dagbók
 * https://github.com/lorraineros/Reiknirit-Lok/wiki/Dagb%C3%B3k
